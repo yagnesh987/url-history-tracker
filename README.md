@@ -13,11 +13,11 @@
 You can install the package via Composer:
 
 ```bash
-composer require yagnesh/url-history-tracker
+composer require yagneshprajapati/url-history-tracker
 
 # Publish
 
-php artisan vendor:publish --tag=config --provider="Yagnesh\UrlHistoryTracker\UrlHistoryTrackerServiceProvider"
+php artisan vendor:publish --tag=config --provider="YagneshPrajapati\UrlHistoryTracker\UrlHistoryTrackerServiceProvider"
 
 # Example:
 

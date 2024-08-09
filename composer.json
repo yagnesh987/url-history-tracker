@@ -1,16 +1,16 @@
 {
-    "name": "yagnesh/url-history-tracker",
+    "name": "yagneshprajapati/url-history-tracker",
     "description": "A package to track and manage URL history",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Yagnesh\\UrlHistoryTracker\\": "src/"
+            "YagneshPrajapati\\UrlHistoryTracker\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Yagnesh\\UrlHistoryTracker\\UrlHistoryTrackerServiceProvider"
+                "YagneshPrajapati\\UrlHistoryTracker\\UrlHistoryTrackerServiceProvider"
             ]
         }
     },
@@ -18,5 +18,11 @@
         "php": "^7.3|^8.0"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Yagnesh Prajapati",
+            "email": "yagneshprajapati987@gmail.com"
+        }
+    ]
 }

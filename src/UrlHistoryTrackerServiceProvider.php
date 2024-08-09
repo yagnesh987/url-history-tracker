@@ -1,9 +1,9 @@
 <?php
 
-namespace Yagnesh\UrlHistoryTracker;
+namespace YagneshPrajapati\UrlHistoryTracker;
 
 use Illuminate\Support\ServiceProvider;
-use Yagnesh\UrlHistoryTracker\Http\Middleware\StoreLastUrls;
+use YagneshPrajapati\UrlHistoryTracker\Http\Middleware\StoreLastUrls;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 

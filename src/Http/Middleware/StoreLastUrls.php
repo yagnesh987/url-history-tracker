@@ -1,6 +1,6 @@
 <?php
 
-namespace Yagnesh\UrlHistoryTracker\Http\Middleware;
+namespace YagneshPrajapati\UrlHistoryTracker\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Session;
