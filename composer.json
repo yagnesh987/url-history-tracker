@@ -1,8 +1,7 @@
 {
     "name": "yagnesh/url-history-tracker",
-    "description": "A Laravel package to track the last 5 URLs visited by a user.",
+    "description": "A package to track and manage URL history",
     "type": "library",
-    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Yagnesh\\UrlHistoryTracker\\": "src/"
@@ -17,5 +16,7 @@
     },
     "require": {
         "php": "^7.3|^8.0"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
