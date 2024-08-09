@@ -20,14 +20,14 @@ class UrlHistoryTrackerServiceProvider extends ServiceProvider
         $this->app['router']->pushMiddlewareToGroup('web', StoreLastUrls::class);
 
         // Define the macro on the Redirect facade
-        Redirect::macro('getSecondLastUrl', function () {
-            $lastUrls = Session::get('last_urls', []);
+        Redirect::macro('getLastUrl', function ($position = 2) {
+        $lastUrls = Session::get('last_urls', []);
 
-            // Pop the first URL
+            // Pop the first URL to maintain the existing functionality
             array_shift($lastUrls);
 
-            // Return the second URL in the remaining list
-            return isset($lastUrls[1]) ? $lastUrls[1] : null;
+            // Return the URL at the specified position, if it exists
+            return isset($lastUrls[$position - 1]) ? $lastUrls[$position - 1] : null;
         });
     }
 
