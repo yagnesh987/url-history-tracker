@@ -9,6 +9,11 @@ class StoreLastUrls
 {
     public function handle($request, Closure $next)
     {
+        // Skip tracking if the request is an AJAX request
+        if ($request->ajax()) {
+            return $next($request);
+        }
+
         $currentUrl = $request->fullUrl();
         $lastUrls = Session::get('last_urls', []);
 
@@ -28,6 +33,12 @@ class StoreLastUrls
     public static function getSecondLastUrl()
     {
         $lastUrls = Session::get('last_urls', []);
-        return $lastUrls[count($lastUrls) - 2] ?? null;
+        
+        // Pop the first URL
+        array_shift($lastUrls);
+        // \Log::info($lastUrls);
+
+        // Return the second URL in the remaining list
+        return isset($lastUrls[1]) ? $lastUrls[1] : null;
     }
 }
