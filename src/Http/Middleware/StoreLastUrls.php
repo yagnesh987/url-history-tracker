@@ -29,16 +29,4 @@ class StoreLastUrls
 
         return $next($request);
     }
-
-    public static function getSecondLastUrl()
-    {
-        $lastUrls = Session::get('last_urls', []);
-        
-        // Pop the first URL
-        array_shift($lastUrls);
-        // \Log::info($lastUrls);
-
-        // Return the second URL in the remaining list
-        return isset($lastUrls[1]) ? $lastUrls[1] : null;
-    }
 }
