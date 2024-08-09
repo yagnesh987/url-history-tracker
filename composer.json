@@ -2,6 +2,7 @@
     "name": "yagneshprajapati/url-history-tracker",
     "description": "A package to track and manage URL history",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "YagneshPrajapati\\UrlHistoryTracker\\": "src/"
